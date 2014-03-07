@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>364</width>
+    <height>385</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="cmdClear">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>40</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>80</y>
+     <width>216</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLineEdit" name="txtLine"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="cmdWrite">
+      <property name="text">
+       <string>Write</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>140</y>
+     <width>258</width>
+     <height>213</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="txtEdit"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblShow">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>cmdClear</zorder>
+  <zorder>cmdWrite</zorder>
+  <zorder>txtLine</zorder>
+  <zorder>lblShow</zorder>
+  <zorder>txtEdit</zorder>
+  <zorder>txtLine</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cmdClear</sender>
+   <signal>clicked()</signal>
+   <receiver>lblShow</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdClear</sender>
+   <signal>clicked()</signal>
+   <receiver>txtLine</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>220</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdClear</sender>
+   <signal>clicked()</signal>
+   <receiver>txtEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>174</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
